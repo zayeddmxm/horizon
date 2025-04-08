@@ -1,0 +1,216 @@
+body {
+
+        background-color: rgb(255, 225, 0);
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center; /* Centers horizontally */
+        align-items: center; /* Centers vertically */
+        height: 100vh; /* Full height of the screen */
+        margin: 0;
+        text-align: center;
+        flex-direction: column; /* Stacks elements vertically */
+        overflow: scroll
+;        }
+        
+    
+    
+   
+
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 250px;
+    margin-bottom: -20px;
+    font-family: "redonda", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding-top: 0%;
+}
+p { 
+    color: rgb(0, 0, 0); /* Black text color */
+    font-size: 17px; /* Adjusts font size */
+    line-height: 0; /* Increases line height for better readability */
+    width: 80%; /* Limits the width of the paragraph for a more balanced look */
+    margin-top: 7px; /* Adds space above the paragraph */
+    font-weight: 600; /* Lighter text weight */
+    padding-top: 0px;
+}
+.click-button1 {
+    display: inline-block;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none; /* Removes underline */
+    border-radius: 5px;
+    font-size: 16px;
+    border: 2px solid rgb(0, 0, 0); /* Adds a solid border with color */
+    border-radius: 5px;
+    cursor: default;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+    transition: all 0.5s ease-in-out;
+}
+
+.click-button1:hover {
+    background-color: #000000; /* Darker green on hover */
+    color: white;
+    transform: scale(1.2); /* Enlarges the button by 20% */
+
+}
+
+h1-1 
+{ 
+    font-family: "redonda", sans-serif;
+        display: flex;
+        justify-content: center; /* Centers horizontally */
+        align-items: center; /* Centers vertically */
+        height: 14vh; /* Full height of the screen */
+        margin: 0;
+        text-align: left;
+        font-size: 100px; /* Adjusts font size */
+        line-height: 0; /* Increases line height for better readability */
+        margin-top: 0px; /* Adds space above the paragraph */
+        font-weight: 600; /* Lighter text weight */
+        position: absolute;
+        top:0;
+        left: 0;
+        padding: 10px;
+}
+p1-1 
+{
+    color: rgb(0, 0, 0); /* Black text color */
+    font-size: 17px; /* Adjusts font size */
+    line-height: 20px; /* Increases line height for better readability */
+    width: 26%; /* Limits the width of the paragraph for a more balanced look */
+    margin-top: 10px; /* Adds space above the paragraph */
+    font-weight: lighter; /* Lighter text weight */
+    text-align: left;
+    position: absolute;
+    height: 28vh; /* Full height of the screen */
+    padding: 10px;
+    top: 100px;
+    left: 10px;
+}
+
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Moves it to the bottom left */
+    display: inline-block;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none; /* Removes underline */
+    border-radius: 5px;
+    font-size: 16px;
+    border: 2px solid rgb(0, 0, 0); /* Adds a solid border with color */
+    border-radius: 5px;
+    cursor: default;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.back-button:hover {
+    background-color: #000000; /* Darker green on hover */
+    color: white;
+    transform: scale(1.2); /* Enlarges the button by 20% */
+
+}
+
+.click-button2 {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Stays at bottom right */
+    display: inline-block;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none; /* Removes underline */
+    border-radius: 5px;
+    font-size: 16px;
+    border: 2px solid rgb(0, 0, 0); /* Adds a solid border with color */
+    border-radius: 5px;
+    cursor: default;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.click-button2:hover{ 
+    background-color: #000000; /* Darker green on hover */
+    color: white;
+    transform: scale(1.2); /* Enlarges the button by 20% */
+
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* First column is wider */
+    grid-template-rows: auto auto; /* Two rows */
+    width: 80%; /* Adjust as needed */
+    margin: auto; /* Center grid */
+    background-color: transparent;
+    border: 1px solid black; /* Strong outer border */
+}
+
+.grid-item {
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Specific styling for the first row */
+.grid-item:nth-child(1) { 
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Style for the dummy text section */
+.lorem-text {
+    grid-column: span 3; /* Spans full width */
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+  
+
+.back-button2 {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Moves it to the bottom left */
+    display: inline-block;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none; /* Removes underline */
+    border-radius: 5px;
+    font-size: 16px;
+    border: 2px solid rgb(0, 0, 0); /* Adds a solid border with color */
+    border-radius: 5px;
+    cursor: default;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.back-button2:hover {
+    background-color: #000000; /* Darker green on hover */
+    color: white;
+    transform: scale(1.2); /* Enlarges the button by 20% */
+
+}
+

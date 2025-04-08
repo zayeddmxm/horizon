@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Third Page</title>
+  <link rel="stylesheet" href="css/main.css"> <!-- External CSS link -->
+
+  <style>
+    /* Grid container */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+      gap: 10px; /* Space between grid items */
+      padding: 0;
+      background-color: transparent;
+      border: none;
+    }
+
+    /* Grid items */
+    .grid-item {
+      background-color: #000000;
+      color: white;
+      padding: 120px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 18px;
+      border: none;
+    }
+
+    /* Additional styling */
+    body {
+      background-color: rgb(255, 225, 0);
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    /* Styling for back button */
+    .back-button2 {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: transparent;
+      color: #000000;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .back-button2:hover {
+      background-color: #000000;
+      color: #fff;
+    }
+
+    #content-area {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Autoplay music with no controls -->
+  <audio autoplay loop>
+    <source src="Joyride.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Grid container with items -->
+  <div class="grid-container">
+    <a href="T1.html" class="grid-item">T1</a>
+    <a href="T2.html" class="grid-item">T2</a>
+    <a href="T3.html" class="grid-item">T3</a>
+    <a href="cityofevil.html" class="grid-item">T4</a>
+    <a href="youthanasia.html" class="grid-item">T5</a>
+    <a href="psychosocial.html" class="grid-item">T6</a>
+  </div>
+
+  <!-- Back button to second page -->
+  <a href="secondpage.html" class="back-button2">Back to 2nd Page!</a>
+</body>
+</html>
