@@ -1,7 +1,100 @@
-Ba boom
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Third Page</title>
-  <link rel="stylesheet" href="css/main.css"> <!-- External CSS link -->
+  <title>Migration</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://use.typekit.net/ugf3ucv.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    .buhid-card h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .buhid-card a {
+      color: blue;
+      font-weight: bold;
+      position: relative;
+      text-decoration: none;
+    }
+
+    .buhid-card a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -3px;
+      left: 0;
+      background-color: blue;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .buhid-card a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .sticker-effect {
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 150px;
+      transform: rotate(-15deg);
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .buhid-card:hover .sticker-effect {
+      animation: bounceIn 0.5s ease-out forwards;
+    }
+
+    @keyframes bounceIn {
+      0% {
+        transform: scale(0.5) rotate(-15deg);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1) rotate(-15deg);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body1-2> 
+
+  <h1-3>MOVING ON!</h1-3>
+
+  <div class="collage-container">
+    <div class="collage">
+      <img src="nightsun.jpg" alt="Photo 1">
+      <img src="duncan.jpg" alt="Photo 2">
+      <img src="home.jpg" alt="Photo 3">
+      <img src="st pats.jpg" alt="Photo 4">
+    </div>
+
+    <div class="buhid-card">
+      <img class="sticker-effect" src="sticker.png" alt="Sticker"> <!-- optional fun effect -->
+      <h1-5>Toronto</h1-5>
+      <p1-5>Toronto left an imprint on me in unexpected ways. 
+        It wasn’t just the skyline or the subway tunnels — it was the layered sense of identity, the quiet tension of navigating belonging in a city that prides itself on diversity. 
+        Walking through different neighborhoods felt like flipping through languages, colors, and smells, all stitched together by the rhythm of streetcars and winter wind. 
+        Toronto taught me how to hold multiple versions of myself at once — immigrant, artist, outsider, local — and move between them without explanation. 
+        It wasn’t always easy, but it was formative.</p1-5>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="navigation-buttons">
+    <a href="T1.html" class="back-button">← RETURN</a>
+    <a href="T3.html" class="click-button2">BECOMING →</a>
+  </div>
+
+  <audio autoplay loop>
+    <source src="best-of-me.mp3" type="audio/mp3">
+  </audio>
+
+</body1-2>
+</html>

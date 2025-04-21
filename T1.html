@@ -1,7 +1,146 @@
-GET TROLLED
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Third Page</title>
-  <link rel="stylesheet" href="css/main.css"> <!-- External CSS link -->
+  <title>Origins</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://use.typekit.net/ugf3ucv.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    #map {
+      height: 300px;
+      width: 500px;
+      margin: 40px auto;
+      border: 2px solid black;
+      border-radius: 12px;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+      z-index: 1;
+      position: relative;
+    }
+
+    .custom-popup {
+      position: absolute;
+      background-color: rgb(255, 225, 0);
+      color: rgb(0, 0, 0);
+      padding: 18px 22px;
+      border: black solid 2px;
+      max-width: 280px;
+      font-family: "snug-sharp-variable", sans-serif;
+      font-variation-settings: "wght" 400, "wdth" 1, "XHGT" 400;
+      font-style: normal;
+      font-size: 30px;
+      line-height: 5px
+      z-index: 1000;
+      animation: fadeInUp 0.3s ease-out;
+    }
+
+    .custom-popup .close-btn {
+      position: absolute;
+      top: 6px;
+      right: 12px;
+      font-size: 30px;
+      cursor: pointer;
+      color: rgb(0, 0, 0);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body1-2> 
+  <audio autoplay loop>
+    <source src="fools.mp3" type="audio/mp3">
+  </audio>
+
+  <h1-2>WHERE IT ALL STARTED...</h1-2>
+
+  <p1-2>
+    I have always used the term 'nomad' to describe myself. 
+    I grew up and lived in many various places, but it all started in Bangladesh. 
+    I was born in Dhaka and lived there for five years. I don't remember much, but there are certain fragments that remain in my mind. 
+    Each region I resided in had a unique story to tell and experience to give. 
+    After those early years, my family decided to leave the nation and explore new places. 
+    Malaysia, I was only five years old, so my brain couldn't comprehend the complexities of what my life and identity would become. 
+    But Malaysia left an impression.
+    I remember the thick, humid air that stuck to my skin and the bustle of languages 
+    I didn't comprehend but had somehow absorbed. 
+    Everything felt larger than life: towering buildings, countless food courts, and neon signs that glowed into the night. 
+    My earliest genuine recollections are fashioned by Kuala Lumpur's rhythms: the morning calls to prayer ringing from surrounding mosques, the clinking of utensils at crowded hawker booths, and the soothing hum of ceiling fans overhead. 
+    School seemed like a mystery. New people, new regulations, unfamiliar alphabets—but also a tremendous curiosity. 
+    I learnt to pronounce "terima kasih" before I could even spell my own name in cursive.
+     My classmates were from all around, and in that little, noisy classroom, I began learning what it meant to carry many cultures. 
+  </p1-2>
+
+  <div id="map"></div>
+
+  <b1-2></b1-2>
+  <a href="T2.html" class="click-button2">MIGRATION →</a>
+  <a href="thirdpage.html" class="back-button">← CHAPTERS</a>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([20, 0], 2);
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '',
+      subdomains: 'abcd',
+      maxZoom: 19
+    }).addTo(map);
+
+    const cities = [
+      {
+        name: "Kuala Lumpur, Malaysia",
+        coords: [3.139, 101.6869],
+        message: ""
+      }
+    ];
+
+    cities.forEach(city => {
+      const marker = L.marker(city.coords).addTo(map);
+
+      marker.on('click', (e) => {
+        e.originalEvent.stopPropagation();
+
+        // Remove existing popup
+        const existing = document.querySelector('.custom-popup');
+        if (existing) existing.remove();
+
+        // Create popup
+        const popup = document.createElement('div');
+        popup.className = 'custom-popup';
+        popup.innerHTML = `
+          <div class="close-btn" onclick="this.parentElement.remove()">×</div>
+          <strong style="font-size: 20px;">${city.name}</strong>
+          <p style="margin-top: 8px;">${city.message}</p>
+        `;
+
+        document.body.appendChild(popup);
+
+        const point = map.latLngToContainerPoint(city.coords);
+        const mapContainer = document.getElementById('map');
+        const mapRect = mapContainer.getBoundingClientRect();
+
+        popup.style.left = `${mapRect.left + point.x + 10}px`;
+        popup.style.top = `${mapRect.top + point.y - 30}px`;
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      const popup = document.querySelector('.custom-popup');
+      if (popup && !e.target.closest('.custom-popup')) {
+        popup.remove();
+      }
+    });
+  </script>
+
+</body1-2>
+</html>

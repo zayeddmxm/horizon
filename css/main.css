@@ -1,216 +1,484 @@
+/* === GLOBAL === */
 body {
+  background-color: rgb(255, 225, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: -5%;
+  text-align: center;
+  overflow: scroll;
+}
 
-        background-color: rgb(255, 225, 0);
-        font-family: Arial, Helvetica, sans-serif;
-        display: flex;
-        justify-content: center; /* Centers horizontally */
-        align-items: center; /* Centers vertically */
-        height: 100vh; /* Full height of the screen */
-        margin: 0;
-        text-align: center;
-        flex-direction: column; /* Stacks elements vertically */
-        overflow: scroll
-;        }
-        
-    
-    
-   
-
+/* === TYPE STYLES === */
 h1 {
-    color: rgb(0, 0, 0);
-    font-size: 250px;
-    margin-bottom: -20px;
-    font-family: "redonda", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    padding-top: 0%;
+  color: black;
+  font-size: 400px;
+  margin-bottom: -20px;
+  font-family: "subway-new-york-sc", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-top: 0;
 }
-p { 
-    color: rgb(0, 0, 0); /* Black text color */
-    font-size: 17px; /* Adjusts font size */
-    line-height: 0; /* Increases line height for better readability */
-    width: 80%; /* Limits the width of the paragraph for a more balanced look */
-    margin-top: 7px; /* Adds space above the paragraph */
-    font-weight: 600; /* Lighter text weight */
-    padding-top: 0px;
+
+p {
+  color: black;
+  font-size: 17px;
+  line-height: 0;
+  width: 80%;
+  margin-top: 7px;
+  font-weight: 600;
+  padding-top: 0;
 }
+
+/* === CUSTOM TAG STYLES === */
+h1-1, h1-2, h1-3, h1-4 {
+  font-family: "subway-new-york-sc", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14vh;
+  margin: 0;
+  text-align: left;
+  font-size: 150px;
+  line-height: 200px;
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  padding: 40px;
+}
+h1-3 {
+  position: fixed;
+  bottom: 20px;
+  left: 40px; /* increase this if you want it even more left */
+  font-size: 130px; /* bump this up for size */
+  transform: rotate(-5deg);
+  z-index: 100;
+  color: black;
+}
+
+ h1-4 {
+  font-size: 200px;
+  line-height: 0;
+}
+
+/* Paragraph Variants */
+p1-1, p1-2, p1-3, p1-4 {
+  font-weight: 400;
+  font-style: normal;
+  font-optical-sizing: auto;
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+  line-height: 23px;
+  text-align: left;
+  position: absolute;
+  height: 28vh;
+  padding: 60px;
+  top: 120px;
+  left: -5px;
+  margin-top: 10px;
+}
+
+p1-1 {
+  font-family: "itc-avant-garde-gothic-pro", sans-serif;
+  font-size: 27px;
+  line-height: 36px;
+  width: 89%;
+  text-align: justify;
+}
+
+p1-2 {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-size: 17px;
+  line-height: 23px;
+  color: rgb(0, 0, 0);
+  width: 39%;
+  display: block;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: textSlideIn 1.5s ease-out 0.5s forwards;
+}
+p1-3 {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  width: 49%;
+}
+
+p1-4 {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  width: 69%
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 21px;
+  width: 10  0%;
+  margin-top: 30px;
+
+}
+
+/* === BUTTONS === */
+.click-button1,
+.click-button2,
+.back-button,
+.back-button2 {
+  display: inline-block;
+  background-color: transparent;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .click-button1 {
-    display: inline-block;
-    background-color: transparent;
-    color: rgb(0, 0, 0);
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none; /* Removes underline */
-    border-radius: 5px;
-    font-size: 16px;
-    border: 2px solid rgb(0, 0, 0); /* Adds a solid border with color */
-    border-radius: 5px;
-    cursor: default;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-
-    transition: all 0.5s ease-in-out;
+  cursor: default;
+  font-family: "montserrat", sans-serif;
 }
 
-.click-button1:hover {
-    background-color: #000000; /* Darker green on hover */
-    color: white;
-    transform: scale(1.2); /* Enlarges the button by 20% */
-
+.click-button1:hover,
+.click-button2:hover,
+.back-button:hover,
+.back-button2:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.2);
 }
 
-h1-1 
-{ 
-    font-family: "redonda", sans-serif;
-        display: flex;
-        justify-content: center; /* Centers horizontally */
-        align-items: center; /* Centers vertically */
-        height: 14vh; /* Full height of the screen */
-        margin: 0;
-        text-align: left;
-        font-size: 100px; /* Adjusts font size */
-        line-height: 0; /* Increases line height for better readability */
-        margin-top: 0px; /* Adds space above the paragraph */
-        font-weight: 600; /* Lighter text weight */
-        position: absolute;
-        top:0;
-        left: 0;
-        padding: 10px;
-}
-p1-1 
-{
-    color: rgb(0, 0, 0); /* Black text color */
-    font-size: 17px; /* Adjusts font size */
-    line-height: 20px; /* Increases line height for better readability */
-    width: 26%; /* Limits the width of the paragraph for a more balanced look */
-    margin-top: 10px; /* Adds space above the paragraph */
-    font-weight: lighter; /* Lighter text weight */
-    text-align: left;
-    position: absolute;
-    height: 28vh; /* Full height of the screen */
-    padding: 10px;
-    top: 100px;
-    left: 10px;
-}
-
-.back-button {
-    position: fixed;
-    bottom: 20px;
-    left: 20px; /* Moves it to the bottom left */
-    display: inline-block;
-    background-color: transparent;
-    color: rgb(0, 0, 0);
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none; /* Removes underline */
-    border-radius: 5px;
-    font-size: 16px;
-    border: 2px solid rgb(0, 0, 0); /* Adds a solid border with color */
-    border-radius: 5px;
-    cursor: default;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    transition: all 0.5s ease-in-out;
-
-}
-
-.back-button:hover {
-    background-color: #000000; /* Darker green on hover */
-    color: white;
-    transform: scale(1.2); /* Enlarges the button by 20% */
-
+.back-button,
+.back-button2 {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
 }
 
 .click-button2 {
-    position: fixed;
-    bottom: 20px;
-    right: 20px; /* Stays at bottom right */
-    display: inline-block;
-    background-color: transparent;
-    color: rgb(0, 0, 0);
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none; /* Removes underline */
-    border-radius: 5px;
-    font-size: 16px;
-    border: 2px solid rgb(0, 0, 0); /* Adds a solid border with color */
-    border-radius: 5px;
-    cursor: default;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    transition: all 0.5s ease-in-out;
-
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: default;
 }
 
-.click-button2:hover{ 
-    background-color: #000000; /* Darker green on hover */
-    color: white;
-    transform: scale(1.2); /* Enlarges the button by 20% */
-
-}
-
-
+/* === GRID STYLES === */
 .grid-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr; /* First column is wider */
-    grid-template-rows: auto auto; /* Two rows */
-    width: 80%; /* Adjust as needed */
-    margin: auto; /* Center grid */
-    background-color: transparent;
-    border: 1px solid black; /* Strong outer border */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 80%;
+  margin: 80px auto;
+  background-color: transparent;
+  border: none;
 }
 
 .grid-item {
-    padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: transparent;
+  color: black;
+  padding: 40px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "subway-new-york-sc", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
-/* Specific styling for the first row */
-.grid-item:nth-child(1) { 
-    text-align: left;
-    font-weight: bold;
-    font-size: 18px;
+.grid-item:hover {
+  background-color: black;
+  color: white;
+  border-color: #ff0;
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out;
 }
 
-/* Style for the dummy text section */
-.lorem-text {
-    grid-column: span 3; /* Spans full width */
-    padding: 10px;
+.grid-item .label {
+  font-weight: bold;
+  font-size: 150px;
+}
+
+.icon {
+  font-size: 36px;
+}
+
+/* === MAP === */
+#map {
+  width: 400px;
+  height: 200px;
+  border: 5px solid black;
+  border-radius: 15px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+  position: relative;
+  top: 200px;
+  left: 380px;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: mapFadeIn 1.2s ease-out forwards;
+}
+
+@keyframes mapFadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* === CUSTOM POPUP === */
+.custom-popup {
+  position: absolute;
+  background-color: black;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  font-family: "snug-sharp-variable", sans-serif;
+  font-variation-settings: "wght" 400, "wdth" 1, "XHGT" 400;
+  max-width: 300px;
+  z-index: 999;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+  animation: fadeInUp 0.4s ease-out;
+  line-height: 1.5;
+}
+
+.custom-popup .close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === WIDGET === */
+.click-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 10px 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: fade-bounce 2s infinite ease-in-out;
+  transition: scale 0.2s ease-in-out;
+}
+
+.click-widget:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+@keyframes fade-bounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-4px);
+    opacity: 0.8;
+  }
+}
+
+/* === OTHER === */
+audio {
+  display: none;
+}
+
+.title-wrap {
+  position: relative;
+  display: inline-block;
+  padding: 20px 40px;
+  background-color: black;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.title-wrap:hover {
+  transform: scale(1.05);
+}
+
+.sticker-effect {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 180px;
+  transform: scale(0) rotate(-10deg);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  pointer-events: none;
+}
+
+.title-wrap:hover .sticker-effect {
+  transform: scale(1) rotate(-10deg);
+  opacity: 1;
+}
+
+.leaflet-control-attribution {
+  display: none !important;
+}
+
+@keyframes textSlideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* COLLAGE LAYOUT */
+.collage {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 14vw);
+  gap: 10px;
+  padding-left: 40px;
+  padding-right: 80px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 160px;
+}
+.collage {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 11vw);
+  gap: 10px;
+  max-width: 700px; /* tightened so it fits beside the card */
+  flex-shrink: 0;
+}
+
+
+
+.collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: 2px solid black;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.collage img:hover {
+  transform: scale(1.05);
+}
+
+/* Example collage layout (customize how each image spans) */
+.collage img:nth-child(1) {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 2;
+}
+
+.collage img:nth-child(2) {
+  grid-column: 4 / span 2;
+  grid-row: 1 / span 1;
+}
+
+.collage img:nth-child(3) {
+  grid-column: 4 / span 2;
+  grid-row: 2 / span 2;
+}
+
+.collage img:nth-child(4) {
+  grid-column: 1 / span 3;
+  grid-row: 3 / span 1;
+}
+
+/* === RESPONSIVE MEDIA QUERIES === */
+@media (max-width: 768px) {
+  p1-2 {
+    width: 90%;
+    padding: 30px;
     font-size: 14px;
-    line-height: 1.5;
-}
+    line-height: 22px;
+  }
 
+  .collage {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .collage img:nth-child(n) {
+    grid-column: span 1 !important;
+    grid-row: auto !important;
+  }
+}
+/* === FLEX CONTAINER FOR COLLAGE + STORY CARD === */
+.collage-container { 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    padding: 40px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 100px; /* lowered to bring card up */
+    flex-wrap: wrap;
+  }
   
 
-.back-button2 {
-    position: fixed;
-    bottom: 20px;
-    left: 20px; /* Moves it to the bottom left */
-    display: inline-block;
-    background-color: transparent;
-    color: rgb(0, 0, 0);
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none; /* Removes underline */
-    border-radius: 5px;
-    font-size: 16px;
-    border: 2px solid rgb(0, 0, 0); /* Adds a solid border with color */
-    border-radius: 5px;
-    cursor: default;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    transition: all 0.5s ease-in-out;
-
+.collage-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  margin-top: 100px;
+  padding: 0 50px; /* prevent it from hugging the edge on wider screens */
+  overflow-x: auto; /* horizontal scrolling if needed */
 }
 
-.back-button2:hover {
-    background-color: #000000; /* Darker green on hover */
-    color: white;
-    transform: scale(1.2); /* Enlarges the button by 20% */
-
+.buhid-card {
+  background-color: rgb(255, 225, 0);
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 16px;
+  padding: 30px;
+  width: 340px;
+  min-height: 480px;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  line-height: 1.6;
+  margin-top: 8%;
+  animation: fadeInUp 0.8s ease-out;
+  box-shadow: 0 4px 14px rgba(0, 0, 255, 0.1);
+  flex-shrink: 0; /* don't let it squish on small screens */
 }
-
+h1-5 {
+  font-family: "itc-avant-garde-gothic-pro", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 21px;
+  margin-bottom: 10px;
+  color: rgb(0, 0, 0);
+  width: 39%;
+  display: block;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: textSlideIn 1.5s ease-out 0.5s forwards;
+}
